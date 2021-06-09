@@ -40,7 +40,7 @@ beats <- beats[!grepl("<U",beats$track_name),]
 beats <- beats[!grepl("<U",beats$artist_name),]
 
 beats %>% count(duplicated(beats$track_name))
-beats %>% distinct(track_name, .keep_all = TRUE, )
+
 
 beats$duplicate <- duplicated(beats[,c("track_name", "artist_name")])
 
