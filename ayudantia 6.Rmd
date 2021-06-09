@@ -16,7 +16,7 @@ library(janitor)
 ````{r}
 load("/Users/gabrielengel/Downloads/beats.RData")
 beats1<- beats
-beats
+
 beats[beats == ""] <- NA
 
 beats %>% summarise_all(funs(sum(is.na(.))))
